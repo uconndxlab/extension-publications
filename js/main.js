@@ -8,7 +8,8 @@ const publications = [{
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
     "date": "2016",
     "link": "./interior.html",
-    "category":"agriculture"
+    "category":"agriculture",
+    "img":"./img/farm.jpg"
   },
 
   {
@@ -18,7 +19,8 @@ const publications = [{
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
     "date": "2017",
     "link": "./interior.html",
-    "category":"agriculture"
+    "category":"agriculture",
+    "img":"./img/farm.jpg"
   },
 
   {
@@ -28,7 +30,8 @@ const publications = [{
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
     "date": "2018",
     "link": "./interior.html",
-    "category":"agriculture"
+    "category":"agriculture",
+    "img":"./img/farm.jpg"
   },
 
   {
@@ -38,7 +41,8 @@ const publications = [{
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
     "date": "2019",
     "link": "./interior.html",
-    "category":"health"
+    "category":"health",
+    "img":"./img/farm.jpg"
   },
   
   {
@@ -48,7 +52,8 @@ const publications = [{
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
     "date": "2020",
     "link": "./interior.html",
-    "category":"climate"
+    "category":"climate",
+    "img":"./img/land.jpg"
   }]
 
   //alphabetically sort publications by title
@@ -62,25 +67,40 @@ publications.sort(function(a,b){
 const renderList = publications => {
     publicationlist.innerHTML = '';
     publications.forEach(element => {
-        var resourcetitle = document.createElement("h2")
-        resourcetitle.innerHTML = element["title"]
-        var resourcename = document.createElement("h4")
-        resourcename.innerHTML = element["firstname"]+" "+element["lastname"]
-        var resourcelink = document.createElement("p")
+        var resourcelabel = document.createElement("p")
+        resourcelabel.classList.add("publication-label")
+        var resourcelabelspan = document.createElement("span")
+        if (element["category"] === "climate"){
+          resourcelabelspan.innerHTML = "Climate Adaptation and Resilience"
+        }
+        if (element["category"] === "health"){
+          resourcelabelspan.innerHTML = "Health and Well-being"
+        }
+        if (element["category"] === "agriculture"){
+          resourcelabelspan.innerHTML = "Agriculture and Food"
+        }
+        resourcelabel.appendChild(resourcelabelspan)
         var resourcelinklink = document.createElement("a")
         resourcelinklink.href = element["link"]
-        resourcelinklink.innerHTML = "Learn More"
-        resourcelink.appendChild(resourcelinklink)
+        var resourcetitle = document.createElement("h2")
+        resourcetitle.innerHTML = element["title"]
+        //var resourcename = document.createElement("h4")
+        //resourcename.innerHTML = element["firstname"]+" "+element["lastname"]
         var resourcesnippet = document.createElement("p")
         resourcesnippet.innerHTML = element["snippet"]
-        var resourcedate = document.createElement("p")
-        resourcedate.innerHTML = element["date"]
+        //var resourcedate = document.createElement("p")
+        //resourcedate.innerHTML = element["date"]
         var listresource = document.createElement("li")
-        listresource.appendChild(resourcetitle)
-        listresource.appendChild(resourcename)
-        listresource.appendChild(resourcedate)
-        listresource.appendChild(resourcesnippet)
-        listresource.appendChild(resourcelink)
+        var resourceimage = document.createElement("img")
+        resourceimage.src = element["img"]
+        resourcelinklink.appendChild(resourceimage)
+        resourcelinklink.appendChild(resourcelabel)
+        resourcelinklink.appendChild(resourcetitle)
+        //listresource.appendChild(resourcename)
+        //listresource.appendChild(resourcedate)
+        resourcelinklink.appendChild(resourcesnippet)
+        listresource.appendChild(resourcelinklink)
+        listresource.classList.add("publication-block")
         document.querySelector('#publication-list').appendChild(listresource)
     })
   }
@@ -176,3 +196,5 @@ const renderList = publications => {
 renderList(publications)
 
   })
+
+
