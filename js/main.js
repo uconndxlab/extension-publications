@@ -2,7 +2,7 @@ const publicationlist = document.querySelector('#publication-list');
 
 //all publications
 const publications = [{
-    "title": "Spring Freezes",
+    "title": "Spring Freezes!",
     "firstname": "Author",
     "lastname": "Salisbury",
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
