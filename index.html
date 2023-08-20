@@ -89,32 +89,77 @@
   <div>
     <h1>Publications</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis odio dolor. Pellentesque dictum enim sed tristique blandit. Integer consequat orci et sapien tempus, volutpat pharetra ipsum volutpat. Ut nunc eros, consequat a urna fringilla, rutrum elementum urna. Nam eu ipsum nisl. Donec vulputate diam ante, a fringilla tortor auctor a. Aliquam nec dui non enim lobortis porttitor et eu augue. Praesent eu mi ultricies, consectetur arcu a, elementum risus.</p>
-    <section class="filters">
-      <div>
-        <p><strong>Category:</strong></p>
-        <input type="checkbox" id="agriculture" value="agriculture" class="category">
-        <label for="agriculture">Agriculture and Food</label>
-        <input type="checkbox" id="climate" value="climate" class="category">
-        <label for="climate">Climate Adaptation and Resilience</label>
-        <input type="checkbox" id="health" value="health" class="category">
-        <label for="health">Health and Well-being</label>
-      </div>
-      <div>
-        <label for="year"><strong>Year:</strong></label>
-            <select id="year" class="" name="year">
-              <option value="all">All</option>
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-            </select>
-      </div>
-      
-    </section>
-    <ul id="publication-list" class="">
+    <div class="filter-pub">
+      <section class="filters">
+        <div>
+          <p><strong>Category:</strong></p>
+          <label for="agriculture" class="checkbox-contain">Production Agriculture
+          <input type="checkbox" id="agriculture" value="agriculture" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="aquaculture" class="checkbox-contain">Aquaculture
+          <input type="checkbox" id="aquaculture" value="aquaculture" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="climate" class="checkbox-contain">Climate
+          <input type="checkbox" id="climate" value="climate" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="food" class="checkbox-contain">Food
+          <input type="checkbox" id="food" value="food" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="health" class="checkbox-contain">Health
+          <input type="checkbox" id="health" value="health" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="home" class="checkbox-contain">Home & Garden
+          <input type="checkbox" id="home" value="home" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="landscapes" class="checkbox-contain">Landscapes
+          <input type="checkbox" id="landscapes" value="landscapes" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="land" class="checkbox-contain">Land Use and Planning
+          <input type="checkbox" id="land" value="land" class="category">
+          <span class="checkmark"></span>
+          </label>
+          
+          <label for="youth" class="checkbox-contain">4-H & Youth
+          <input type="checkbox" id="youth" value="youth" class="category">
+          <span class="checkmark"></span>
+          </label>
+        </div>
+        <hr>
+        <div>
+          <label for="year"><strong>Year:</strong></label>
+          <br>    
+              <select id="year" class="" name="year" style="margin-top:10px">
+                <option value="all">All</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2020">2021</option>
+                <option value="2020">2022</option>
+                <option value="2020">2023</option>
+              </select>
+        </div>
+        
+      </section>
+      <ul id="publication-list" class="">
 
-    </ul>
+      </ul>
+    </div>
   </div>
 </div>
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>

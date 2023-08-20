@@ -13,11 +13,11 @@ const publications = [{
   },
 
   {
-    "title": "Hopperburn",
+    "title": "Beware of Hopperburn!",
     "firstname": "Brian",
     "lastname": "Daley",
-    "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
-    "date": "2017",
+    "snippet": "‘Hopperburn’ refers to the complex of symptoms associated with potato leafhopper (PLH) feeding injury. This leafhopper, native to North America, has a broad host plant range including 220 plant species in 26 families.",
+    "date": "2023",
     "link": "./interior.html",
     "category":"agriculture",
     "img":"./img/farm.jpg"
@@ -70,14 +70,32 @@ const renderList = publications => {
         var resourcelabel = document.createElement("p")
         resourcelabel.classList.add("publication-label")
         var resourcelabelspan = document.createElement("span")
-        if (element["category"] === "climate"){
-          resourcelabelspan.innerHTML = "Climate Adaptation and Resilience"
-        }
-        if (element["category"] === "health"){
-          resourcelabelspan.innerHTML = "Health and Well-being"
-        }
         if (element["category"] === "agriculture"){
-          resourcelabelspan.innerHTML = "Agriculture and Food"
+          resourcelabelspan.innerHTML = "Production Agriculture"
+        }
+        else if (element["category"] === "aquaculture"){
+          resourcelabelspan.innerHTML = "Aquaculture"
+        }
+        else if (element["category"] === "climate"){
+          resourcelabelspan.innerHTML = "Climate"
+        }
+        else if (element["category"] === "food"){
+          resourcelabelspan.innerHTML = "Food"
+        }
+        else if (element["category"] === "health"){
+          resourcelabelspan.innerHTML = "Health"
+        }
+        else if (element["category"] === "home"){
+          resourcelabelspan.innerHTML = "Home & Garden"
+        }
+        else if (element["category"] === "landscapes"){
+          resourcelabelspan.innerHTML = "Landscapes"
+        }
+        else if (element["category"] === "land"){
+          resourcelabelspan.innerHTML = "Land Use and Planning"
+        }
+        else if (element["category"] === "youth"){
+          resourcelabelspan.innerHTML = "4-H & Youth"
         }
         resourcelabel.appendChild(resourcelabelspan)
         var resourcelinklink = document.createElement("a")
@@ -168,33 +186,11 @@ const renderList = publications => {
         }    
         renderList(filteredArray)
     }   
-    
-    //this really is not a great long term set up if we have a lot of filters
-    // function filterPublications(){
-    //     if ("category" in filtersArray && "date" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             (filtersArray["category"].includes(element.category)) && element.date === filtersArray["date"]
-    //         )
-    //     }
-    //     else if ("category" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             (filtersArray["category"].includes(element.category))
-    //         )
-    //     }
-    //     else if ("date" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             element.date === filtersArray["date"]
-    //         )
-    //     }
-    //     else {
-    //         filteredArray = publications
-    //     }
-    //     renderList(filteredArray)
-    // }
 
 //show all publications on load
 renderList(publications)
 
   })
+
 
 
