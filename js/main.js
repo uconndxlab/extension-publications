@@ -2,7 +2,7 @@ const publicationlist = document.querySelector('#publication-list');
 
 //all publications
 const publications = [{
-    "title": "Spring Freezes!",
+    "title": "Spring Freezes",
     "firstname": "Author",
     "lastname": "Salisbury",
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
@@ -22,16 +22,38 @@ const publications = [{
     "category":"agriculture",
     "img":"./img/farm.jpg"
   },
-
+  
   {
-    "title": "New Pesticides for Vegetable Production",
-    "firstname": "Jane",
+    "title": "Fireblight & Mitigating Resistant Populations",
+    "firstname": "John",
     "lastname": "Doe",
-    "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
-    "date": "2018",
+    "snippet": "After a few weeks of visiting with fruit growers in the state, it’s clear that Fireblight remains one of the top concerns for the fruit industry. This disease, caused by the bacterium Erwinia amylovora, is both highly destructive and infectious, making informed disease management efforts a top priority.",
+    "date": "2023",
     "link": "./interior.html",
     "category":"agriculture",
-    "img":"./img/farm.jpg"
+    "img":"./img/land.jpg"
+  },
+
+  {
+    "title": "Pesticides registered in 2023 for vegetable production in Connecticut",
+    "firstname": "John",
+    "lastname": "Doe",
+    "snippet": "Integrated pest management (IPM) is a way to manage pests by combining biological, cultural, mechanical, and chemical practices. Although IPM places a strong emphasis on pest prevention and reducing chemical usage, it is important to acknowledge that complete avoidance of chemicals may not always be feasible.",
+    "date": "2023",
+    "link": "./interior.html",
+    "category":"agriculture",
+    "img":"./img/land.jpg"
+  },
+
+  {
+    "title": "Smith-Lever Legislation and Funding Requirements",
+    "firstname": "John",
+    "lastname": "Doe",
+    "snippet": "This document is the first in a series that will identify the types of Extension programs at UConn based on their legislative mandates and funding requirements.",
+    "date": "2023",
+    "link": "./interior.html",
+    "category":"land",
+    "img":"./img/land.jpg"
   },
 
   {
