@@ -18,7 +18,7 @@ const publications = [{
     "lastname": "Daley",
     "snippet": "‘Hopperburn’ refers to the complex of symptoms associated with potato leafhopper (PLH) feeding injury. This leafhopper, native to North America, has a broad host plant range including 220 plant species in 26 families.",
     "date": "2023",
-    "link": "/hopperburn.html",
+    "link": "./hopperburn.html",
     "category":"agriculture",
     "img":"./img/placeholder3.jpg"
   },
