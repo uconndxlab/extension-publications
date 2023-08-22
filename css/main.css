@@ -14,9 +14,13 @@ ul{
   padding-left:0px!important;
 }
 
-li{
+#publication-list li{
   margin-bottom:30px;
   padding-bottom:10px;
+}
+
+.publication-reference li{
+  margin-bottom:10px;
 }
 
 p{
@@ -72,6 +76,23 @@ h4{
   font-weight:600;
   padding-left:-50px!important;
   padding:2px 5px;
+}
+
+.publication-cover-img{
+  object-fit:cover;
+}
+
+.figure img{
+    object-fit: contain;
+    padding-top:20px;
+    width:100%;
+}
+
+.publication-figure{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+  grid-gap: 10px;
+  text-align:center;
 }
 
 /* CUSTOM CHECKBOXES /*
@@ -143,7 +164,7 @@ h4{
 }
 
 @media screen and (min-width: 960px){
-  li{
+  #publication-list li{
     margin-bottom:5%;
   }
   
