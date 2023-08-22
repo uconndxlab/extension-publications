@@ -2,7 +2,7 @@ const publicationlist = document.querySelector('#publication-list');
 
 //all publications
 const publications = [{
-    "title": "Spring Freezes!",
+    "title": "Spring Freezes",
     "firstname": "Author",
     "lastname": "Salisbury",
     "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
@@ -13,25 +13,47 @@ const publications = [{
   },
 
   {
-    "title": "Hopperburn",
+    "title": "Beware of Hopperburn!",
     "firstname": "Brian",
     "lastname": "Daley",
-    "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
-    "date": "2017",
+    "snippet": "‘Hopperburn’ refers to the complex of symptoms associated with potato leafhopper (PLH) feeding injury. This leafhopper, native to North America, has a broad host plant range including 220 plant species in 26 families.",
+    "date": "2023",
     "link": "./interior.html",
     "category":"agriculture",
     "img":"./img/farm.jpg"
   },
-
+  
   {
-    "title": "New Pesticides for Vegetable Production",
-    "firstname": "Jane",
+    "title": "Fireblight & Mitigating Resistant Populations",
+    "firstname": "John",
     "lastname": "Doe",
-    "snippet": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus luctus ligula ac condimentum. Aenean pulvinar leo ipsum, in consequat mi elementum at.",
-    "date": "2018",
+    "snippet": "After a few weeks of visiting with fruit growers in the state, it’s clear that Fireblight remains one of the top concerns for the fruit industry. This disease, caused by the bacterium Erwinia amylovora, is both highly destructive and infectious, making informed disease management efforts a top priority.",
+    "date": "2023",
     "link": "./interior.html",
     "category":"agriculture",
-    "img":"./img/farm.jpg"
+    "img":"./img/land.jpg"
+  },
+
+  {
+    "title": "Pesticides registered in 2023 for vegetable production in Connecticut",
+    "firstname": "John",
+    "lastname": "Doe",
+    "snippet": "Integrated pest management (IPM) is a way to manage pests by combining biological, cultural, mechanical, and chemical practices. Although IPM places a strong emphasis on pest prevention and reducing chemical usage, it is important to acknowledge that complete avoidance of chemicals may not always be feasible.",
+    "date": "2023",
+    "link": "./interior.html",
+    "category":"agriculture",
+    "img":"./img/land.jpg"
+  },
+
+  {
+    "title": "Smith-Lever Legislation and Funding Requirements",
+    "firstname": "John",
+    "lastname": "Doe",
+    "snippet": "This document is the first in a series that will identify the types of Extension programs at UConn based on their legislative mandates and funding requirements.",
+    "date": "2023",
+    "link": "./interior.html",
+    "category":"land",
+    "img":"./img/land.jpg"
   },
 
   {
@@ -70,14 +92,32 @@ const renderList = publications => {
         var resourcelabel = document.createElement("p")
         resourcelabel.classList.add("publication-label")
         var resourcelabelspan = document.createElement("span")
-        if (element["category"] === "climate"){
-          resourcelabelspan.innerHTML = "Climate Adaptation and Resilience"
-        }
-        if (element["category"] === "health"){
-          resourcelabelspan.innerHTML = "Health and Well-being"
-        }
         if (element["category"] === "agriculture"){
-          resourcelabelspan.innerHTML = "Agriculture and Food"
+          resourcelabelspan.innerHTML = "Production Agriculture"
+        }
+        else if (element["category"] === "aquaculture"){
+          resourcelabelspan.innerHTML = "Aquaculture"
+        }
+        else if (element["category"] === "climate"){
+          resourcelabelspan.innerHTML = "Climate"
+        }
+        else if (element["category"] === "food"){
+          resourcelabelspan.innerHTML = "Food"
+        }
+        else if (element["category"] === "health"){
+          resourcelabelspan.innerHTML = "Health"
+        }
+        else if (element["category"] === "home"){
+          resourcelabelspan.innerHTML = "Home & Garden"
+        }
+        else if (element["category"] === "landscapes"){
+          resourcelabelspan.innerHTML = "Landscapes"
+        }
+        else if (element["category"] === "land"){
+          resourcelabelspan.innerHTML = "Land Use and Planning"
+        }
+        else if (element["category"] === "youth"){
+          resourcelabelspan.innerHTML = "4-H & Youth"
         }
         resourcelabel.appendChild(resourcelabelspan)
         var resourcelinklink = document.createElement("a")
@@ -168,33 +208,11 @@ const renderList = publications => {
         }    
         renderList(filteredArray)
     }   
-    
-    //this really is not a great long term set up if we have a lot of filters
-    // function filterPublications(){
-    //     if ("category" in filtersArray && "date" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             (filtersArray["category"].includes(element.category)) && element.date === filtersArray["date"]
-    //         )
-    //     }
-    //     else if ("category" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             (filtersArray["category"].includes(element.category))
-    //         )
-    //     }
-    //     else if ("date" in filtersArray){
-    //         filteredArray = publications.filter(element => 
-    //             element.date === filtersArray["date"]
-    //         )
-    //     }
-    //     else {
-    //         filteredArray = publications
-    //     }
-    //     renderList(filteredArray)
-    // }
 
 //show all publications on load
 renderList(publications)
 
   })
+
 
 
